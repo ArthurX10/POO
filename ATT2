@@ -1,0 +1,18 @@
+public static void main(String[] args){
+      
+        try {
+            String l = JOptionPane.showInputDialog("informe a largura do terreno");
+       double largura = Double.parseDouble(l);
+       
+        String c = JOptionPane.showInputDialog("informe a comprimento do terreno");
+        double comprimento = Double.parseDouble(c);
+        
+        double area = largura * comprimento;
+        
+         JOptionPane.showMessageDialog(null, "Area do terreno: " + area);
+        }
+    catch(NumberFormatException erro){
+    JOptionPane.showMessageDialog(null, "houve erro na conversao, digite aoenas caracteres numericos" + erro.toString());
+}
+    System.exit(0);
+}
