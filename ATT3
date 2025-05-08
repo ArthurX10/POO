@@ -1,0 +1,14 @@
+ public static void main(String[] args){
+      double[] a = new double[4];
+      String[] b = new String[4];
+      double soma =0;
+      
+      
+      for (int i=0; i < 4;i++){
+          b[i] = JOptionPane.showInputDialog("informe a um valor:");
+          a[i] = Double.parseDouble(b[i]);
+          soma += a[i];
+      }
+      double media = soma / 4;
+    resto[i] =  soma % a[i] 
+  }
