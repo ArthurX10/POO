@@ -1,0 +1,16 @@
+public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        // valor de venda, percetual de desconto 
+        int venda, desconto; 
+        System.out.println("qual o valor da venda:");
+        venda = scanner.nextInt();
+        
+        System.out.println("infome o valor do desconto: ");
+        desconto = scanner.nextInt();
+        
+        double resul = venda * (desconto * 0,01);
+        
+        System.out.println(resul);
+        
+        
+}
