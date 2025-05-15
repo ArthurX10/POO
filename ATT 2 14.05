@@ -4,13 +4,13 @@ public static void main(String[] args) {
         int venda, desconto; 
         System.out.println("qual o valor da venda:");
         venda = scanner.nextInt();
-        
+
         System.out.println("infome o valor do desconto: ");
         desconto = scanner.nextInt();
+
+        double r = venda * (desconto* 0.01);
+        double valorfinal = venda - r;
+        double arredondado = Math.floor(valorfinal);
+        System.out.println(arredondado);
         
-        double resul = venda * (desconto * 0,01);
-        
-        System.out.println(resul);
-        
-        
-}
+    }
