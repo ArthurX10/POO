@@ -1,0 +1,17 @@
+public static void main(String[] args){
+        try{
+            int[] idade = new int[4];  
+            
+            for(int i = 0; i< 4; i++){
+                String a = JOptionPane.showInputDialog("informe a idade" + ( i +1));
+                idade[i] = Integer.parseInt(a);
+            
+            }
+            int maior = Arrays.stream(idade).max().getAsInt();
+            int menor = Arrays.stream(idade).min().getAsInt();
+            
+            JOptionPane.showMessageDialog(null, "idades\n " + idade[0] + "," + idade[1] + "," + idade[2] + ","+ idade[3] + "\n A maior idade é: " + maior + "\n A menor idade é " + menor);
+        }  catch (NumberFormatException erro) {
+        JOptionPane.showMessageDialog(null, "Erro: digite apenas números válidos.\n" + erro.toString());
+}
+    }
