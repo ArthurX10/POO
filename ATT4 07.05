@@ -1,0 +1,17 @@
+public static void main(String[] args){
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.print("Comprimento da piscina: ");
+        double c = scanner.nextDouble();
+        System.out.print("Largura da piscina: ");
+        double l = scanner.nextDouble();
+        System.out.print("Profundidade da piscina: ");
+        double p = scanner.nextDouble();
+        
+        double area = c * l * p;
+        double valor = area * 45;
+        
+        System.out.println("Area da piscina: " + area);
+        System.out.println("valor total: " + valor);
+       
+    }
