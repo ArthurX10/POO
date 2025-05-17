@@ -1,0 +1,22 @@
+ public static void main(String[] args){
+    Scanner scanner = new Scanner(System.in);
+    int cont = 0;
+    
+    System.out.print("forneça uma palavra: ");
+    String palavra = scanner.nextLine();
+          
+    System.out.print("Forneça uma frase: ");
+    String frase = scanner.nextLine();
+    
+    String[] palavras  = frase.split(" "); 
+    
+    for(String p : palavras){
+        if(p.equals(palavra)){
+         cont++;
+    } 
+        
+    }
+    System.out.println(cont);
+            
+    
+    } 
