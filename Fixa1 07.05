@@ -1,0 +1,25 @@
+public static void main(String[] args){
+        double valor;
+        int desconto;
+        
+        
+        try{
+            double total=0;
+            String a = JOptionPane.showInputDialog("Informe o valor de produto");
+            valor = Double.parseDouble(a);
+            
+            String b = JOptionPane.showInputDialog("Qual o desconto");
+            desconto = Integer.parseInt(b);
+            
+            switch (desconto) {
+                case 1 -> total = valor - (valor * 0.05);
+                case 2 -> total = valor - (valor * 0.1);
+                case 3 -> total = valor - (valor * 0.2);
+                case 4 -> total = valor -(valor * 0.5);
+                default -> System.out.println("Codigo do desconto errado!!");
+            } 
+            System.out.println("Valor a ser pago: " + total);
+        } catch (NumberFormatException erro) {
+        JOptionPane.showMessageDialog(null, "Erro: digite apenas números válidos.\n" + erro.toString());
+}
+    }
