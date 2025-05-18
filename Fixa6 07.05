@@ -1,0 +1,24 @@
+public static void main(String[] args){
+    double valor;
+    int desconto;
+
+
+    try{
+        double total=0;
+        String a = JOptionPane.showInputDialog("Informe o valor de produto");
+        valor = Double.parseDouble(a);
+
+        String b = JOptionPane.showInputDialog("Qual o aumento");
+        desconto = Integer.parseInt(b);
+
+        switch (desconto) {
+            case 1 -> total = valor + (valor * 0.15);
+            case 3 -> total = valor + (valor * 0.20);
+            case 4 -> total = valor + (valor * 0.35);
+            case 8 -> total = valor + (valor * 0.40);
+            default -> System.out.println("Codigo do aumento errado!!");
+        } 
+           JOptionPane.showMessageDialog(null, "Valor a ser pago: " + total);
+    } catch (NumberFormatException erro) {
+    JOptionPane.showMessageDialog(null, "Erro: digite apenas números válidos.\n" + erro.toString());
+  }
