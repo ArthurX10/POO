@@ -1,0 +1,15 @@
+public static void main(String[] args) {
+     Scanner scanner = new Scanner(System.in);
+    String senha  = "admin";
+    String s = " ";
+    
+
+    for (int i = 0; i < 3; i++ ){
+      System.out.print("Digite a senha: ");
+      s = scanner.nextLine();
+      if (senha.equals(s)){
+      System.out.println("Senha valida!");
+        break;
+    } 
+    }
+  }
