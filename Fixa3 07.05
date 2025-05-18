@@ -1,0 +1,22 @@
+public static void main(String[] args) {
+   Scanner scanner = new Scanner(System.in);
+    
+    System.out.println("Enter a number: ");
+    int n1 = scanner.nextInt();
+    
+    System.out.println("Enter a nummber: ");
+    int n2 = scanner.nextInt();
+
+     scanner.nextLine();
+    
+    System.out.println("Enter a option: A,B,C,D");
+    String option = scanner.nextLine();
+
+    switch(option) {
+      case "A" -> System.out.println(n1 + n2);
+      case "B" -> System.out.println(n1 - n2);
+      case "C" -> System.out.println(n1 * n2);
+      case "D" -> System.out.println(n1 / n2);
+      default -> System.out.println("Invsalid option!");
+ 
+        }
