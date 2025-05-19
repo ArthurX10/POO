@@ -1,0 +1,30 @@
+public static void main(String[] args){
+    Scanner scanner =  new Scanner(System.in);
+    double bruto = 0, salarioHora = 0, inss = 0, ir =0;
+    int horas, dependentes;
+
+    System.out.print("Informe o salario hora: ");
+    salarioHora = scanner.nextDouble();
+
+    System.out.print("informe a quantidade de horas trabalhadas: ");
+    horas = scanner.nextInt();
+
+    System.out.print("inform a quantidade de dependentes: ");
+    dependentes = scanner.nextInt();
+    bruto = salarioHora * horas + (50 * dependentes);
+    
+    if(bruto <= 1000){
+      inss = bruto * 8.5/100;
+    } else {
+      inss = bruto * 9/100;;
+    }
+
+    if(bruto <= 0){
+      ir = 0;
+    } else if(bruto > 500 && bruto <= 1000){
+      ir = bruto * 5/100;
+    } else {
+      ir = bruto * 7/100;
+    }
+    double liquido = bruto - inss - ir;
+    System.out.println("Salario liquido: "+ liquido);
