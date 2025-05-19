@@ -1,0 +1,21 @@
+public static void main(String[] args){
+  Random random = new Random();
+    int [] dado = new int[10];
+    for(int i = 0; i < 10; i++){
+      System.out.println(random.nextInt(6) + 1);
+    }
+System.out.println("");
+    
+
+duas maneiras de fazer o código
+
+
+
+    for(int i = 0; i< 10; i++){
+      dado[i] = random.nextInt(6) + 1;
+      System.out.println(dado[i]);
+    }
+   }
+
+
+ 
