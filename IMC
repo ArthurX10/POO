@@ -1,0 +1,31 @@
+ public static void main(String[] args){
+    double peso, altura;
+    String r = "";
+    String m = "";
+    
+        try{
+         r= JOptionPane.showInputDialog("entre com o peso");
+         peso = Double.parseDouble(r);
+         
+         r =JOptionPane.showInputDialog("entre com a altura");
+         altura = Double.parseDouble(r);
+         
+         double imc = peso / (altura * altura);
+         if(imc < 18.5){
+             m = "abaixo do peso";
+         } else if(imc >=18.5 && imc <24.4){
+            m = "peso ideal";
+        } else if(imc >= 25.5 && imc < 29.9){
+            m = "pré-obesidade";
+        } else if(imc >= 30 && imc < 34.4) {
+           m = "Obesidade classe I";
+        } else if(imc >= 34.5 && imc > 39.9) {
+            m = "Obediade classe II";
+        } else{
+            m = "Obesidade Classe III";
+        }
+          
+         JOptionPane.showMessageDialog(null, m);
+     } catch(NumberFormatException erro){
+         JOptionPane.showInputDialog(null, "erro na conversão" + erro.toString());
+     }
