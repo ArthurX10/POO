@@ -1,0 +1,20 @@
+public static void main(String[] args){
+        String s = "";
+        BufferedReader dado = new BufferedReader(new InputStreamReader(System.in));
+        try{
+            System.out.print("entre com a base do triangulo: ");
+            s = dado.readLine();
+            double base = Double.parseDouble(s);
+            
+            System.out.print("entre com a altura do triangulo: ");
+            s = dado.readLine();
+            double altura = Double.parseDouble(s);
+            
+            double area = (base * altura)/2;
+            System.out.println(area);
+        } catch(IOException e){
+            System.out.println("Erro de leitura");
+        } catch (NumberFormatException e){
+            System.out.println("Entrada invalida.");
+        }
+    }
