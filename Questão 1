@@ -86,3 +86,7 @@ public class Demo {
         }
     }
 }
+
+Exception in thread "main" java.lang.UnsupportedOperationException: Not supported yet.
+	at questao1.Calculadora.capturarValores(Calculadora_1.java:8)
+	at questao1.demo.main(demo.java:24)
