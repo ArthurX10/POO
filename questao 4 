@@ -1,0 +1,86 @@
+public class Aluno {
+    String nome;
+    String dataIngresso;
+    String matricula;
+    double nota1;
+    double nota2;
+    double media;
+    boolean estuda;
+
+    // Método para inicializar o aluno
+    public void inicializaAluno(String nome, String dataIngresso, String matricula, double nota1, double nota2) {
+        this.nome = nome;
+        this.dataIngresso = dataIngresso;
+        this.matricula = matricula;
+        this.nota1 = nota1;
+        this.nota2 = nota2;
+        this.estuda = true;
+    }
+
+    // Método para consultar as notas
+    public String consultarNotas() {
+        return "Nota 1: " + nota1 + "\nNota 2: " + nota2;
+    }
+
+    // Método para calcular a média
+    public double calcularMedia() {
+        media = (nota1 + nota2) / 2;
+        return media;
+    }
+
+    // Método para verificar a situação do aluno
+    public String situacaoDoAluno() {
+        calcularMedia(); // garantir que a média está atualizada
+        if (media >= 6) {
+            return "Aprovado com média: " + media;
+        } else {
+            return "Reprovado com média: " + media;
+        }
+    }
+
+    // Método para indicar que o aluno desistiu
+    public void desistir() {
+        estuda = false;
+    }
+
+    // Método toString
+    @Override
+    public String toString() {
+        return "Nome do aluno: " + nome +
+                "\nData de ingresso: " + dataIngresso +
+                "\nMatrícula: " + matricula +
+                "\nNota 1: " + nota1 +
+                "\nNota 2: " + nota2 +
+                "\nMédia: " + media +
+                "\nEstuda na escola: " + (estuda ? "Sim" : "Não");
+    }
+}
+
+
+public class DemoAluno {
+    public static void main(String[] args) {
+        Aluno aluno = new Aluno();
+        
+        // Inicializando o aluno
+        aluno.inicializaAluno("Maria Silva", "20/02/2023", "20232045", 7.5, 8.0);
+
+        // Exibindo as notas
+        System.out.println(aluno.consultarNotas());
+
+        // Calculando e mostrando a média
+        System.out.println("Média: " + aluno.calcularMedia());
+
+        // Mostrando a situação
+        System.out.println(aluno.situacaoDoAluno());
+
+        // Mostrando os dados completos do aluno
+        System.out.println(aluno);
+
+        // O aluno desiste
+        aluno.desistir();
+
+        // Mostrando novamente o estado do aluno após desistir
+        System.out.println("\nApós desistir:");
+        System.out.println(aluno);
+    }
+}
